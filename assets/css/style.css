@@ -504,6 +504,6 @@ footer p {
 
 @media screen and (max-width:480px) {
     .country_box {
-        width: calc(100%);
+        width: calc(100% / 2);
     }
 }
