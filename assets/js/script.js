@@ -151,7 +151,7 @@ if(pageName[0] == "explore-country"){
     }
     
     // Example: Making an AJAX GET request
-    console.log(params['country-name'].split("+").join(" "));
+    // console.log(params['country-name'].split("+").join(" "));
     params['country-name'] = params['country-name'].split("+").join(" ")
     var apiUrl = `https://restcountries.com/v3.1/name/${params['country-name']}`;
 
@@ -160,7 +160,7 @@ if(pageName[0] == "explore-country"){
     });
 
     function printHTML(countrydata){
-        console.log(countrydata);
+        // console.log(countrydata);
         document.getElementById("countryTitle").innerText = `${countrydata.name.official} | Jags Fact`
         document.getElementById("countryFlag").setAttribute("src",countrydata.flags.svg)
         document.getElementById("officialName").innerHTML = countrydata.name.official  ; //put coat of arm here
@@ -171,7 +171,7 @@ if(pageName[0] == "explore-country"){
         var nativeNameList = "";
         for (let x in nativeName) {
             if(x != "eng"){
-                console.log(nativeName[x].official);
+                // console.log(nativeName[x].official);
                 nativeNameList += `<i>${nativeName[x].official}</i>`;
             }
         }
