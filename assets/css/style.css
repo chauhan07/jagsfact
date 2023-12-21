@@ -4,17 +4,34 @@
     font-family: 'Poppins', sans-serif;
 }
 
+*:empty{
+    background-color: #f7f7f7;
+}
+a:empty{
+    background-color: transparent;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+h1 *,
+h2 *,
+h3 *,
+h4 *,
+h5 *,
+h6 *{
     font-family: 'Young Serif', serif;
 }
 
-a{
+a {
     text-decoration: none
+}
+
+.inner{
+    width: 100%;
 }
 
 .country_box {
@@ -165,6 +182,7 @@ a{
     background: #d9925b;
 }
 
+
 /** header **/
 
 header {
@@ -259,7 +277,6 @@ header ul a {
     margin: 0 0 50px;
 }
 
-
 .section_country {
     background: #f8f8f8;
     padding-top: 100px;
@@ -277,6 +294,7 @@ header ul a {
     margin-bottom: 40px;
     text-align: center
 }
+
 
 /** footer **/
 
@@ -316,6 +334,7 @@ footer p {
     font-size: 20px;
     margin: 0;
 }
+
 
 /*** rto page ***/
 
@@ -443,13 +462,233 @@ footer p {
     font-weight: 800;
 }
 
+.explore {
+    background: #f8f8f8;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* .explore .right {
+    display: flex;
+    align-items: center;
+} */
+
+.explore .oName img {
+    width: 25px;
+    margin-right: 15px;
+}
+
+.explore .right .inner{
+    background-color: #fff;
+    height: 100%;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;    
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.explore .oName {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.explore .cName,
+.explore .capitalCity,
+.explore .continent,
+.explore .population {
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.explore .cName span,
+.explore .capitalCity span,
+.explore .continent span,
+.explore .population span {
+    display: inline-block;
+    min-width: 200px;
+    margin-left: 15px;
+}
+
+
+.explore .cName strong,
+.explore .capitalCity strong,
+.explore .continent strong,
+.explore .population strong,
+.explore .nativeNames strong{
+    color: #d9925b;
+}
+
+.explore #nativeNames i {
+    background: #c95b05;
+    color: #fff;
+    font-style: normal;
+    display: inline-block;
+    font-size: 13px;
+    padding: 4px 15px;
+    margin-right: 10px;
+}
+
+.mapsHdng {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.mapsHdng p {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 14px;
+}
+
+.mapsHdng p img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.mapsHdng p a {
+    color: #000;
+    text-decoration: none;
+}
+
+.otherInfo {
+    background: #fff;
+    width: 100%;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+.otherInfo .hdng {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.otherInfo ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.otherInfo ul li {
+    width: 49.5%;
+    background: #fcf5f0;
+    margin-top: 8px;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.otherInfo ul li span{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 100%;
+    height: 100%;
+}
+
+.otherInfo ul li span:last-child{
+    width: calc(100% - 200px);
+    text-transform: capitalize;
+}
+
+.otherInfo ul li span:first-child {
+    font-weight: 600;
+    width: 150px;
+    background: #f7eae0;
+    padding: 5px 15px;
+    margin-right: 10px;
+}
+
+.otherInfo ul li i.currname {
+    background: #d9925b;
+    color: #fff;
+    font-size: 11px;
+    display: inline-block;
+    margin: 5px 5px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+}
+
+.otherInfo ul li i.info {
+    background: #03426d;
+    color: #fff;
+}
+
+.otherInfo ul li i.warning {
+    background: #580404;
+    color: #fff;
+}
+
+.otherInfo ul li i.info,
+.otherInfo ul li i.warning{
+    display: inline-block;
+    padding: 2px 15px;
+}
+
+.searchCountry {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.searchCountry select {
+    width: 400px;
+    max-width: 100%;
+    height: 50px;
+    max-width: 100%;
+}
+
+.searchCountry input[type="submit"] {
+    width: 150px;
+    height: 45px;
+    text-align: center;
+    background: #1e1b18;
+    border: 0;
+    color: #fff;
+}
+
+.select2-container .select2-selection--single, .select2-container .select2-selection--single > span {
+    height: 45px;
+    line-height: 45px!important;
+    font-size: 14px;
+    background: #f2e5d9;
+    border: 0;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    height: 43px;
+}
+
+.select2-container .select2-selection--single > span:first-child {
+    border: 1px solid #1e1b183d;
+}
+
+.select2-container input.select2-search__field {
+    outline: none;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background: #000;
+}
+
+.select2-results__option[aria-selected] {
+    font-size: 14px;
+}
 
 @media screen and (max-width:1199.99px) {
     .country_box {
         width: calc(100% / 4);
     }
 }
-
 
 @media screen and (max-width:991.99px) {
     .country_box {
@@ -459,8 +698,12 @@ footer p {
     .banner .hdng {
         font-size: 38px;
     }
-}
 
+    .otherInfo ul li {
+        width: 100%;
+        max-width: 100%;
+    }
+}
 
 @media screen and (max-width:767.99px) {
     .country_box {
@@ -471,7 +714,6 @@ footer p {
         font-size: 32px;
     }
 }
-
 
 @media screen and (max-width:575.99px) {
     .country_box {
@@ -499,11 +741,35 @@ footer p {
         font-size: 28px;
     }
 
-}
+    .mapsHdng p {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        font-size: 14px;
+    }
 
+    .mapsHdng p:last-child {
+        margin-top: 30px;
+    }
+    
+    .explore {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
 
 @media screen and (max-width:480px) {
     .country_box {
-        width: calc(100% / 2);
+        width: calc(100%/2);
+    }
+
+    .otherInfo ul li span:first-child {
+        width: 100%;
+        max-width: 100%;
+    }
+    .otherInfo ul li span{
+        padding: 5px 15px;
+        display: inline-block;
     }
 }

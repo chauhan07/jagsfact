@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Countries | Jags Facts</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+
+    <header class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="./countries.htm">
+                        <h1 class="logo">Jags <span>Fact</span></h1>
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <ul>
+                        <li>
+                            <a href="./countries.htm" class="">Countries</a>
+                        </li>
+                        <li>
+                            <a href="./rto.htm" class="">RTO</a>
+                        </li>
+                        <li>
+                            <a href="#" class="cmn_btn">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="hdng">
+                        Discover the World: Explore Countries, Capitals, Flags, and More
+                    </h1>
+                    <p class="subHdng">
+                        Uncover the rich tapestry of nations with our comprehensive database – Your go-to resource for country facts, capitals, flags, and fascinating insights. Embark on a global journey from the comfort of your screen!
+                    </p>
+                    <a href="#countries" class="cmn_btn dark">View All Countries</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="container-fluid py-60 section_country" id="countries">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="hdng">
+                        Global Diversity at Your Fingertips
+                    </h2>
+                    <p class="cntnt">
+                        Navigate the World: Explore Countries by Continent with Easy Filters
+                    </p>
+
+                    <div class="searchCountry">
+                        <form action="./explore-country.htm" method="GET">
+                            <select name="country-name" id="countryNameList"></select>
+                            <input type="submit" value="Search">
+                        </form>
+                    </div>
+
+                    <ul class="tabsCntnt">
+                        <li data-region="all" class="active">
+                            <span>
+                                All
+                            </span>
+                        </li>
+                        <li data-region="asia">
+                            <span>
+                                Asia
+                            </span>
+                        </li>
+                        <li data-region="africa">
+                            <span>
+                                Africa
+                            </span>
+                        </li>
+                        <li class="dropdown">
+                            <span>
+                                America's
+                            </span>
+                            <ul>
+                                <li data-region="north america">
+                                    <span>North America</span>
+                                </li>
+                                <li data-region="caribbean">
+                                    <span>Caribbean</span>
+                                </li>
+                                <li data-region="central america">
+                                    <span>Central America</span>
+                                </li>
+                                <li data-region="south america">
+                                    <span>South America</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-region="oceania">
+                            <span>
+                                Oceania
+                            </span>
+                        </li>
+                        <li data-region="europe">
+                            <span>
+                                Europe
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="countries_list">
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <span class="loadMore" id="load_more">
+                        Load More
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-8">
+                    <h1 class="logo">Jags <span>Fact</span></h1>
+                    <p>
+                        &copy; All Right Reserved 2023.
+                    </p>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <ul>
+                        <li>
+                            <a href="./countries.htm">
+                                Countries
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./rto.htm">
+                                RTO
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Select2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
