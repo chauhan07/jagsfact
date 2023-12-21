@@ -5,6 +5,7 @@
 
 // this will change when domain chnage 
 let pathName = window.location;
+console.log(pathName.pathname.split("/"));
 let pageName = pathName.pathname.split("/")[6].split(".");
 console.log(pathName.pathname.split("/"));
 
