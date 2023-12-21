@@ -742,6 +742,9 @@ footer p {
     header ul li{
         margin: 0 15px;
     }
+    .banner {
+        padding: 150px 0 100px;
+    }
 }
 
 @media screen and (max-width:575.99px) {
@@ -789,16 +792,17 @@ footer p {
 }
 
 @media screen and (max-width:480px) {
-    .country_box {
-        width: calc(100%/2);
-    }
-
-    .otherInfo ul li span:first-child {
-        width: 100%;
-        max-width: 100%;
+    .otherInfo ul li{
+        flex-direction: column;
     }
     .otherInfo ul li span{
+        height: auto;
+        width: 100%!important;
         padding: 5px 15px;
         display: inline-block;
+        margin: 0!important;
+    }
+    .country_box {
+        width: calc(100%/2);
     }
 }
