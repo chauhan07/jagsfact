@@ -639,6 +639,7 @@ footer p {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 60px;
+    padding: 0 15px;
 }
 
 .searchCountry select {
