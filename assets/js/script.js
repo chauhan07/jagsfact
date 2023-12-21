@@ -6,7 +6,7 @@
 // this will change when domain chnage 
 let pathName = window.location;
 let pageName = pathName.pathname.split("/")[6].split(".");
-//console.log(pageName[0]);
+console.log(pathName.pathname.split("/"));
 
 
 if(pageName[0] == "countries"){
