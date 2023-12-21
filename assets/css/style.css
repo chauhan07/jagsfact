@@ -200,6 +200,7 @@ header .logo {
     text-transform: uppercase;
     margin: 0;
     color: #fff;
+    cursor: pointer;
 }
 
 header .logo span {
