@@ -133,6 +133,10 @@ a {
     justify-content: center;
 }
 
+.tabsCntnt li {
+    margin: 5px 0;
+}
+
 .tabsCntnt li span {
     display: inline-block;
     padding: 10px 35px;
@@ -640,7 +644,11 @@ footer p {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 60px;
-    padding: 0 15px;
+    padding: 0 0px;
+}
+
+.searchCountry form{
+    max-width: 100%;
 }
 
 .searchCountry select {
@@ -714,6 +722,25 @@ footer p {
 
     .banner .hdng {
         font-size: 32px;
+    }
+
+    .select2-container{
+        width: 100%!important;
+    }
+    
+    .searchCountry input[type="submit"] {
+        width: 100%;
+        margin-top: 10px;
+    }
+    header .logo{
+        text-align: center;
+    }
+    header ul {
+        margin-top: 25px;
+        justify-content: center;
+    }
+    header ul li{
+        margin: 0 15px;
     }
 }
 
