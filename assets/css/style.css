@@ -694,6 +694,83 @@ footer p {
     font-size: 14px;
 }
 
+/* map tiler css  */
+
+.map_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+
+.map_modal.show{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.map_modal .map_container {
+    background: #fff;
+    width: 1200px;
+    height: 600px;
+    max-width: 99%;
+    max-height: 99vh;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.map_modal .map_container #map {
+    width: 100%;
+    height: 100%;
+}
+
+.infoBoxOnMap {
+    width: 200px;
+}
+
+.infoBoxOnMap ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.infoBoxOnMap ul li:nth-child(odd) {
+    width: 50%;
+    font-weight: 600;
+}
+
+.infoBoxOnMap ul li {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+button#showMapPoup {
+    margin: 50px auto 0;
+    background: #000;
+    border: 1px solid #000;
+    color: #fff;
+    padding: 12px 15px;
+    width: 250px;
+    text-align: center;
+    transition: 0.5s ease;
+}
+button#showMapPoup:hover{
+    background: #fff;
+    color: #000;
+}
+
 @media screen and (max-width:1199.99px) {
     .country_box {
         width: calc(100% / 4);
