@@ -375,6 +375,7 @@ footer p {
     border: 1px solid #f0ded0;
     margin-top: 30px;
     border-radius: 15px;
+    width:100%;
 }
 
 .rto_box .hdng {
