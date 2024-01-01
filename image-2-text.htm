@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image to text Convertor | Jags Facts</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+
+    <header class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="./countries.htm">
+                        <h1 class="logo">Jags <span>Fact</span></h1>
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <ul>
+                        <li>
+                            <a href="./countries.htm" class="">Countries</a>
+                        </li>
+                        <li>
+                            <a href="./rto.htm" class="">RTO</a>
+                        </li>
+                        <li>
+                            <a href="#" class="cmn_btn">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="img_to_text_wrapper">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12 col-sm-10 col-md-9 col-lg-9">
+                    <div class="inner">
+                        <div class="hdng">
+                            <h1>
+                                Image to Text Converter
+                            </h1>
+                            <p>
+                                Turn picture into text with our free image to text converter. Simply upload your photos in our online OCR and extract text from image with a single click.
+                            </p>
+                        </div>
+                        <form action="">
+                            <div class="ap_label_wrap">
+                                <label class="customInput_ap" for="uploadInputImage">
+                                    <input type="file" name="" id="uploadInputImage">
+                                    <div>
+                                        <img src="https://i.imgur.com/QJyy55M.png" alt="">
+                                        <span class="fileName">
+                                            Drag & Drop Files Here
+                                        </span>
+                                        <span>
+                                            OR
+                                        </span>
+                                    
+                                        <span>
+                                            Browse Files
+                                        </span>
+                                    </div>
+                                </label>
+                            </div>
+                        </form>
+
+                        <div class="loaderBox" style="display:none">
+                            Wait while your image is processing 
+                            <span class="loader"></span>
+                        </div>
+
+                        <div class="output_box" style="display:none">
+                            <h3>
+                                Output Text
+                            </h3>
+                            <div id="outputText"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-8">
+                    <h1 class="logo">Jags <span>Fact</span></h1>
+                    <p>
+                        &copy; All Right Reserved 2023.
+                    </p>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <ul>
+                        <li>
+                            <a href="./countries.htm">
+                                Countries
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./rto.htm">
+                                RTO
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+    <script>
+
+        $(".img_to_text_wrapper input[type='file']").change(function(){
+            var filename = $('.img_to_text_wrapper input[type=file]').val().split('\\').pop();
+            if(filename == ''){
+                $(".fileName").html("Drag & Drop Files Here")
+            } else{
+                $(".loaderBox").show();
+                $(".fileName").html(filename);
+                var outputText ='';
+                var formData = new FormData();
+                formData.append('image', $('#uploadInputImage')[0].files[0]);
+                $.ajax({
+                    method: 'POST',
+                    url: 'https://api.api-ninjas.com/v1/imagetotext',
+                    headers: { 'X-Api-Key': 'MLywqXxNS0Oki/NXtkd/Xw==HoWhOIa4cH6VQxWx'},
+                    data: formData,
+                    enctype: 'multipart/form-data',
+                    processData: false,
+                    contentType: false, 
+                    success: function(result) {
+                        console.log(result.length);
+                        result.forEach(element => {
+                            outputText += `${element.text} ` ;
+                        });
+                        $(".loaderBox").hide();
+                        $(".output_box").show();
+                        if(result.length > 0){
+                            $("#outputText").text(outputText);
+                        } else{
+                            $("#outputText").html(`<span>Please upload a valid image which has some text</span>`)   ;
+                        }
+                        
+                    },
+                    error: function ajaxError(jqXHR, textStatus, errorThrown) {
+                        alert(jqXHR.responseText);
+                    }
+                });
+            }
+        });
+
+
+        $(".abc").click(function(){
+            
+        })
+    </script>
+</body>
+
+</html>
