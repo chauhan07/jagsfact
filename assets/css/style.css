@@ -359,6 +359,7 @@ footer p {
     padding: 0px 60px 15px;
     flex-direction: column;
     box-shadow: 5px 5px 0px #ed925b;
+    max-width:100%
 }
 
 .container_rto .logo span {
@@ -1012,3 +1013,62 @@ button#showMapPoup:hover{
         transform: rotate(360deg);
     }
 } 
+
+/* encryption css */
+
+.container_encrypt_decrypt .logo{
+    font-size: 24px;
+    padding-top: 15px;
+}
+@media screen and (max-width:575px){
+    .container_encrypt_decrypt .logo {
+        font-size: 20px;
+        padding: 15px 15px;
+    }
+    .container_rto .logo span{
+        font-size: 13px;
+    }
+}
+.container_encrypt_decrypt .rto_box .form {
+    width: 600px;
+}
+
+.container_encrypt_decrypt .rto_box .form textarea#messageInput,
+.container_encrypt_decrypt .rto_box .form textarea#encryptedInput {
+    height: 150px;
+    padding: 15px 15px;
+    outline: none;
+    font-size: 13px;
+    border: 1px solid #cccccc
+}
+
+.container_encrypt_decrypt .rto_box .form button#encryptButton,
+.container_encrypt_decrypt .rto_box .form button#decryptButton {
+    background: #000;
+    color: #fff;
+    border: 0;
+    margin-top: 15px;
+    padding: 15px 10px;
+}
+
+.container_encrypt_decrypt .rto_box .encrypt_message .output {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    height: 150px;
+    white-space: pre-wrap;
+}
+
+.container_encrypt_decrypt .rto_box .encrypt_message {
+    text-align: left;
+    width: 600px;
+    max-width: 100%;
+    margin: 25px auto 0;
+}
+
+.container_encrypt_decrypt .rto_box .encrypt_message label{
+    font-size: 14px;
+    font-weight: 600;
+    color: #d9925b;
+    text-align: left;
+}

@@ -1,17 +1,18 @@
+
 <!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home | Jags Facts</title>
+    <title>RTO | Jags Facts</title>
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+
 </head>
 
 <body>
-
 
     <header class="container-fluid">
         <div class="container">
@@ -46,7 +47,44 @@
             </div>
         </div>
     </header>
+    
+    <section class="container-fluid container_rto container_encrypt_decrypt">
+        <div class="container d-flex justify-content-center">
+            <div class="logo">
+                Message Encryptor/Decryptor
+                <span>
+                    Speak in Code: Encrypt Messages, Reveal the Hidden!
+                </span>
+            </div>
+        </div>
+        
+        <div class="container d-flex justify-content-center">
+            <div class="rto_box">
+                <h1 class="hdng">
+                    Enter your message in the following Test Area.
+                </h1>
+                <p class="desc">
+                    Do you want to find any vehicle details? Please go through RTO Vehicle Information... it gives you the complete details of any vehicle which is registered in India.
+                </p>
 
+                <div class="form">
+                    <label for="">
+                        Encrypted Message
+                    </label>
+                    <textarea id="encryptedInput" placeholder="Type your encrypted message here..."></textarea>
+                    <button id="decryptButton">Decrypt</button>
+                </div>
+
+                <div class="encrypt_message">
+                    <label for="">
+                        Decrypted  Message
+                    </label>
+                    <div class="output" id="decryptedOutput"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <footer class="container-fluid">
         <div class="container">
             <div class="row">
@@ -98,7 +136,9 @@
         </div>
     </footer>
 
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/rto-list.js"></script>
+    <script src="./assets/js/decryption.js"></script>
+    
 </body>
 
 </html>
